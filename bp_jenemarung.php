@@ -116,7 +116,7 @@
                                <th>Debit (lt/det)</th>
                           </tr>    
                             <?php
-                            $url = 'https://scada-pamukkulu.com/conn_bp_jenemarung.php';
+                            $url = 'http://localhost:8080/scada/conn_bp_jenemarung.php';
                             $data = file_get_contents($url); // put the contents of the file into a variable
                             $opendata = json_decode($data);
                             rsort($opendata);
@@ -290,7 +290,7 @@ getData();
 $('#myChart1').hide()
   
         async function getData() {
-            const response = await fetch('https://scada-pamukkulu.com/conn_bp_jenemarung.php');
+            const response = await fetch('http://localhost:8080/scada/conn_bp_jenemarung.php');
             // console.log(response);
             const data = await response.json();
             data.sort();
@@ -437,7 +437,7 @@ $('#myChart1').hide()
 <script>
     //  getDatas();
         async function getDatas() {
-            const response = await fetch('https://scada-pamukkulu.com/data_bp_jenemarung.json');
+            const response = await fetch('http://localhost:8080/scada/data_bp_jenemarung.json');
             // console.log(response);
             const data = await response.json();
             data.reverse();

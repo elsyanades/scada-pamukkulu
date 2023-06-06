@@ -1,6 +1,6 @@
     <?php
           // Connect to the database
-      $pdo = new PDO('mysql:host=localhost;dbname=n1579439_db', 'n1579439_admin', 'br8OQLU6vA');
+      $pdo = new PDO('mysql:host=localhost;dbname=scada', 'root', '');
 
       // Prepare a query
       $stmt = $pdo->query("SELECT * FROM bp_pamukkulu WHERE DATE(tanggal) = CURDATE()");

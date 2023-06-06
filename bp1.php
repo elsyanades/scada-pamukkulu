@@ -114,7 +114,7 @@
                                <th>Debit (lt/det)</th> 
                           </tr>    
                             <?php
-                            $url = 'https://scada-pamukkulu.com/conn_bp1.php';
+                            $url = 'http://localhost:8080/scada/conn_bp1.php';
                             $data = file_get_contents($url); // put the contents of the file into a variable
                             $opendata = json_decode($data);
                             rsort($opendata);
@@ -283,7 +283,7 @@ getData();
 $('#myChart1').hide()
   
         async function getData() {
-            const response = await fetch('https://scada-pamukkulu.com/conn_bp1.php');
+            const response = await fetch('http://localhost:8080/scada/conn_bp1.php');
             // console.log(response);
             const data = await response.json();
             data.sort();
@@ -406,7 +406,7 @@ $('#myChart1').hide()
 <script>
     //  getDatas();
         async function getDatas() {
-            const response = await fetch('https://scada-pamukkulu.com/data_bp1.json');
+            const response = await fetch('http://localhost:8080/scada/data_bp1.json');
             // console.log(response);
             const data = await response.json();
             data.reverse();

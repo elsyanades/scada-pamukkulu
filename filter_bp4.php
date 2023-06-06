@@ -2,7 +2,7 @@
  //filter.php  
  if(isset($_POST["from_date"], $_POST["to_date"]))  
  {  
-     $connect = mysqli_connect("localhost", "n1579439_admin", "br8OQLU6vA", "n1579439_db");
+     $connect = mysqli_connect("localhost", "root", "", "scada");
       $output = '';  
       $query = "  
            SELECT * FROM bp4  
